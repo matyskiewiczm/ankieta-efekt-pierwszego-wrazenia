@@ -6,14 +6,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
-<script>
-$("#button").click(function () {
-    var $anchors = $(this).find("a.button-link");
-    var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
-    window.open($anchor.attr("href"),'_blank');
-});
-</script>
-
 </head>
 
 <style>
@@ -72,6 +64,15 @@ h1 {
 
 
 <body>
+    
+<script>
+$("#button").click(function () {
+    var $anchors = $(this).find("a.button-link");
+    var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
+    window.open($anchor.attr("href"),'_blank');
+});
+</script>
+    
 <div id="button">
   link
   <a class="button-link" href="http://www.google.com">a</a>
