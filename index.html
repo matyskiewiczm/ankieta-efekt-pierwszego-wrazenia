@@ -65,19 +65,10 @@ h1 {
 
 <body>
     
-<script>
-$("#button").click(function () {
-    var $anchors = $(this).find("a.button-link");
-    var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
-    window.open($anchor.attr("href"),'_blank');
-});
-</script>
-    
 <div id="button">
   link
   <a class="button-link" href="http://www.google.com">a</a>
   <a class="button-link" href="http://www.yahoo.com">b</a>
-  <a class="button-link" href="http://www.bing.com">c</a>
 </div>
 <div class=subtitle1>
 <h1>Kliknij powyższy przycisk aby przejść do ankiety.</h1>
@@ -85,6 +76,13 @@ $("#button").click(function () {
 Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoją odpowiedź.
 </p>
 </div>
+  <script>
+$("#button").click(function () {
+    var $anchors = $(this).find("a.button-link");
+    var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
+    window.open($anchor.attr("href"),'_blank');
+});
+</script>
 </body>
 
 </html>
