@@ -1,0 +1,82 @@
+<html>
+
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+
+<script>
+$("#button").click(function () {
+    var $anchors = $(this).find("a.button-link");
+    var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
+    window.open($anchor.attr("href"),'_blank');
+});
+</script>
+
+</head>
+
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color:#121212;
+}
+
+h1 {
+  font-weight:900;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+.subtitle1 {
+  background-color:#1c1c1c;
+  color:white;
+  border-radius: 20px;
+  margin-top: 40px;
+  width: 500px;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 30px 60px 40px 60px;
+}
+
+#button {
+    color:bblack;
+    background: #bb86fc;
+    border-radius: 20px;
+    width: 100px;
+    height: 70px;
+    text-align:center;
+    line-height:66px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 40px;
+    font-weight:900;
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+#button a.button-link {
+  display: none;
+}
+</style>
+
+
+
+<body>
+<div id="button">
+  link
+  <a class="button-link" href="http://www.google.com">a</a>
+  <a class="button-link" href="http://www.yahoo.com">b</a>
+  <a class="button-link" href="http://www.bing.com">c</a>
+</div>
+<div class=subtitle1>
+<h1>Kliknij powyższy przycisk aby przejść do ankiety.</h1>
+<p>
+Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoją odpowiedź.
+</p>
+</div>
+</body>
+
+</html>
