@@ -77,13 +77,17 @@ Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoj�
 </p>
 </div>
   
-<script type="text/javascript">
+<script>
+  
 $("#button").click(function () {
     var $anchors = $(this).find("a.button-link");
     var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
     window.open($anchor.attr("href"),'_blank');
 });
+  
 </script>
+  
+<script src="script.js" type="text/JavaScript"></script>
   
 </body>
 
