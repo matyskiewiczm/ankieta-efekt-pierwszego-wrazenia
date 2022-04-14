@@ -76,13 +76,15 @@ h1 {
 Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoją odpowiedź.
 </p>
 </div>
-<script>
+  
+<script type="text/javascript">
 $("#button").click(function () {
     var $anchors = $(this).find("a.button-link");
     var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
     window.open($anchor.attr("href"),'_blank');
 });
 </script>
+  
 </body>
 
 </html>
