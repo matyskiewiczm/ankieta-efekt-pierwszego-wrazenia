@@ -64,11 +64,12 @@ h1 {
 
 
 <body>
-    
+
 <div id="button">
   link
   <a class="button-link" href="http://www.google.com">a</a>
   <a class="button-link" href="http://www.yahoo.com">b</a>
+  <a class="button-link" href="http://www.bing.com">c</a>
 </div>
 <div class=subtitle1>
 <h1>Kliknij powyższy przycisk aby przejść do ankiety.</h1>
@@ -76,7 +77,7 @@ h1 {
 Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoją odpowiedź.
 </p>
 </div>
-  <script>
+<script>
 $("#button").click(function () {
     var $anchors = $(this).find("a.button-link");
     var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
