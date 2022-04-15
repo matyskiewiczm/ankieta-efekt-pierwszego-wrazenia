@@ -1,94 +1,140 @@
 <html>
 
 
-<head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
-<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-</head>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+  </head>
 
-<style>
-body {
-  font-family: 'Inter', sans-serif;
-  background-color:#121212;
-    margin:0;
-}
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      margin: 0;
+    }
 
-html {
-  font-family: 'Inter', sans-serif;
-  background-color:#121212;
-  margin:0;
-}
+    html {
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      margin: 0;
+    }
 
-h1 {
-  font-weight:900;
-  font-size: 20px;
-  line-height: 60px;
-}
+    h1 {
+      font-weight: 900;
+      font-size: 36px;
+    }
 
-.subtitle1 {
-  background-color:#1c1c1c;
-  color:white;
-  border-radius: 20px;
-  margin-top: 40px;
-  width: 500px;
-  margin-left:auto;
-  margin-right:auto;
-  padding: 30px 60px 40px 60px;
-}
+    .subtitlewrap {
+      background-color: #1c1c1c;
+      color: white;
+      border-radius: 20px;
+      margin-top: 40px;
+      width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px 60px 40px 60px;
+    }
 
-#button {
-    color:bblack;
-    background: #bb86fc;
-    border-radius: 20px;
-    width: 100px;
-    height: 70px;
-    text-align:center;
-    line-height:66px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 40px;
-    font-weight:900;
-}
+    .subtitle1 {}
 
-#button:hover {
-    cursor: pointer;
-}
+    .subtitle2 {
+      text-align: justify;
+    }
 
-#button a.button-link {
-  display: none;
-}
-</style>
+    #button {
+      color: black;
+      background: #bb86fc;
+      border-radius: 20px;
+      width: 620px;
+      height: 70px;
+      text-align: center;
+      line-height: 66px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 40px;
+      font-weight: 900;
+    }
+
+    #button:hover {
+      cursor: pointer;
+    }
+
+    #button a.button-link {
+      display: none;
+    }
+
+    @media only screen and (max-width: 500px) {
+
+      h1 {
+        font-size: 42px;
+        line-height: initial;
+        padding-top: 30px;
+      }
+
+      #button {
+        width: calc(100% - 40px);
+        height: 100px;
+        font-size: 42px;
+        line-height: 96px;
+      }
+
+      .subtitlewrap {
+        width: calc(100% - 40px);
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .subtitle1 {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 40px 0px 40px;
+        font-size: 26px;
+      }
+
+      .subtitle2 {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 40px 40px 40px;
+        font-size: 22px;
+      }
+    }
+
+  </style>
 
 
 
-<body>
+  <body>
 
-<div id="button">
-  link
-  <a class="button-link" href="https://forms.gle/gMRvdYETbeDqc2wo9">a</a>
-  <a class="button-link" href="https://forms.gle/uBbktGyjonS18g246">b</a>
-</div>
-<div class=subtitle1>
-<h1>Kliknij powyższy przycisk aby przejść do ankiety.</h1>
-<p>
-Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoją odpowiedź. Ankieta może zostać wypełniona tylko raz. Dziękujemy <3
-</p>
-</div>
-  
-<script>
-  
-$("#button").click(function () {
-    var $anchors = $(this).find("a.button-link");
-    var $anchor = $($anchors[Math.floor(Math.random()*$anchors.length)]);
-    window.open($anchor.attr("href"),'_blank');
-});
-  
-</script>
-  
-<script src="script.js" type="text/JavaScript"></script>
-  
-</body>
+    <div id="button">
+      link
+      <a class="button-link" href="https://forms.gle/gMRvdYETbeDqc2wo9">a</a>
+      <a class="button-link" href="https://forms.gle/uBbktGyjonS18g246">b</a>
+    </div>
+
+    <div class="subtitlewrap">
+      <div class=subtitle1>
+        <h1>Kliknij powyższy przycisk aby przejść do ankiety.</h1>
+      </div>
+      <div class=subtitle2>
+        Zostanież przegierowany na stronę Google Forms, gdzie możesz przesłać swoją odpowiedź. Ankieta może zostać wypełniona tylko raz. Dziękujemy. ❤️
+      </div>
+
+    </div>
+
+    <script>
+      $("#button").click(function() {
+        var $anchors = $(this).find("a.button-link");
+        var $anchor = $($anchors[Math.floor(Math.random() * $anchors.length)]);
+        window.open($anchor.attr("href"), '_blank');
+      });
+
+    </script>
+
+    <script src="script.js" type="text/JavaScript"></script>
+
+  </body>
 
 </html>
